@@ -1,0 +1,450 @@
+/* ========================================
+   ESALINA'S PORTFOLIO - NATURE THEME
+   Colors: Green (#0f766e, #14b8a6) & Blue
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f766e 0%, #2dd4bf 50%, #059669 100%);
+    color: #1e293b;
+    overflow-x: hidden;
+}
+
+/* ========================================
+   NAVIGATION BAR
+   ======================================== */
+
+nav {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(15, 118, 110, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+nav a {
+    color: #0f766e;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    position: relative;
+}
+
+nav a:hover {
+    color: #14b8a6;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #0f766e, #14b8a6);
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ========================================
+   SECTIONS LAYOUT
+   ======================================== */
+
+section {
+    min-height: 100vh;
+    padding: 6rem 2rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 3rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   HOME SECTION
+   ======================================== */
+
+#home .container {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 253, 250, 0.95));
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid #14b8a6;
+    box-shadow: 0 10px 40px rgba(20, 184, 166, 0.4);
+    margin: 0 auto 2rem;
+    display: block;
+    background: #d1fae5;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: #0f766e;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(15, 118, 110, 0.1);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #059669;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.quote {
+    font-size: 1.2rem;
+    color: #475569;
+    font-style: italic;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: rgba(209, 250, 229, 0.5);
+    border-left: 5px solid #14b8a6;
+    border-radius: 10px;
+}
+
+/* ========================================
+   SECTION HEADERS
+   ======================================== */
+
+h2 {
+    font-size: 2.8rem;
+    color: #0f766e;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #0f766e, #14b8a6);
+    border-radius: 2px;
+}
+
+/* ========================================
+   ABOUT SECTION
+   ======================================== */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #334155;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, #0f766e, #14b8a6);
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(15, 118, 110, 0.3);
+}
+
+.hobbies {
+    margin-top: 2rem;
+}
+
+.hobbies h3 {
+    color: #0f766e;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.hobby-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    color: #475569;
+}
+
+.hobby-item::before {
+    content: '🌿';
+    margin-right: 0.8rem;
+    font-size: 1.3rem;
+}
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    margin: 1rem 0.5rem;
+    background: linear-gradient(135deg, #0f766e, #14b8a6);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    box-shadow: 0 5px 20px rgba(15, 118, 110, 0.4);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(15, 118, 110, 0.6);
+}
+
+/* ========================================
+   PROJECTS SECTION
+   ======================================== */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: linear-gradient(135deg, #f0fdfa, #ccfbf1);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(15, 118, 110, 0.15);
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(15, 118, 110, 0.3);
+    border-color: #14b8a6;
+}
+
+.project-card h3 {
+    color: #0f766e;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background: #14b8a6;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ========================================
+   RESUME SECTION
+   ======================================== */
+
+.resume-box {
+    text-align: center;
+    padding: 3rem;
+    background: linear-gradient(135deg, #f0fdfa, #ccfbf1);
+    border-radius: 20px;
+    margin-top: 2rem;
+}
+
+.resume-box p {
+    font-size: 1.2rem;
+    color: #475569;
+    margin-bottom: 2rem;
+}
+
+/* ========================================
+   REFLECTIONS SECTION
+   ======================================== */
+
+.reflection-text {
+    font-size: 1.2rem;
+    line-height: 2;
+    color: #334155;
+    text-align: justify;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f0fdfa, #ccfbf1);
+    border-radius: 20px;
+    margin-top: 2rem;
+    border-left: 6px solid #14b8a6;
+}
+
+/* ========================================
+   CONTACT SECTION
+   ======================================== */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-item {
+    background: linear-gradient(135deg, #f0fdfa, #ccfbf1);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(15, 118, 110, 0.15);
+    transition: all 0.3s;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(15, 118, 110, 0.3);
+}
+
+.contact-item h3 {
+    color: #0f766e;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.contact-item a {
+    color: #14b8a6;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.contact-item a:hover {
+    color: #0f766e;
+}
+
+/* ========================================
+   DECORATIVE ELEMENTS
+   ======================================== */
+
+.leaf-bg {
+    position: fixed;
+    font-size: 3rem;
+    opacity: 0.1;
+    z-index: -1;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0) rotate(0deg); 
+    }
+    50% { 
+        transform: translateY(-20px) rotate(5deg); 
+    }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+    h1 { 
+        font-size: 2.5rem; 
+    }
+    
+    h2 { 
+        font-size: 2rem; 
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .container {
+        padding: 2rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}

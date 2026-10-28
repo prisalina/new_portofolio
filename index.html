@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esalina Prisa Wanudia - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Modern glowing background effects -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 20L14 4" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M18 16L22 12L18 8" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 8L2 12L6 16" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <defs>
+                        <linearGradient id="logo-grad" x1="2" y1="4" x2="22" y2="20" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#a855f7" />
+                            <stop offset="1" stop-color="#ec4899" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                Porto<span>folio.</span>
+            </div>
+            <!-- Mobile Hamburger Toggle -->
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#reflections">Reflections</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="badge">Welcome to my universe</span>
+                <h1>Hi, I'm <span class="highlight">Esalina Prisa Wanudia</span></h1>
+                <p class="subtitle">Informatics Engineering Student | Mobile & Web Developer</p>
+                <p class="description">
+                    I am passionate about crafting beautiful, intuitive, and highly functional digital experiences. Let's build something amazing together.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="assets/profile.jpg" alt="Esalina Prisa Wanudia" onerror="this.src='https://via.placeholder.com/400x400/8b5cf6/ffffff?text=Esalina+Prisa'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>My Journey</h3>
+                    <p>Hello! I am Esalina Prisa Wanudia, a passionate individual deeply interested in technology and software development. I constantly strive to improve my skills and create impactful digital solutions.</p>
+                    <p>I have hands-on experience in building scalable web applications and intuitive user interfaces. I enjoy translating complex problems into elegant solutions through code.</p>
+                    <a href="#" class="btn btn-outline btn-sm mt-4">📄 Download Resume</a>
+                </div>
+
+                <div class="skills-card">
+                    <h3>Skills & Technologies</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Web Development</span>
+                        <span class="skill-tag">Mobile Development</span>
+                        <span class="skill-tag">UI/UX Design</span>
+                        <span class="skill-tag">HTML5 & CSS3</span>
+                        <span class="skill-tag">JavaScript (ES6+)</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag">Responsive Design</span>
+                    </div>
+
+                    <h3 class="mt-4">Hobbies</h3>
+                    <div class="hobbies-list">
+                        <span class="hobby"><i class="icon">🚀</i> Exploring tech</span>
+                        <span class="hobby"><i class="icon">🎧</i> Music</span>
+                        <span class="hobby"><i class="icon">🎨</i> Creative Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="pf-filter-bar">
+                <button class="pf-btn active" onclick="filterProjects('all', this)">All</button>
+                <button class="pf-btn" onclick="filterProjects('web', this)">Web</button>
+                <button class="pf-btn" onclick="filterProjects('mobile', this)">Mobile</button>
+                <button class="pf-btn" onclick="filterProjects('bot', this)">Bot</button>
+            </div>
+
+            <div class="projects-grid pf-grid">
+
+                <!-- PROJECT 1: Abisheka Web -->
+                <div class="pf-item" data-cat="web">
+                    <div class="pf-body">
+                        <span class="pf-label type-web">Web</span>
+                        <h3 class="pf-name">Abisheka Web</h3>
+                        <p class="pf-desc">A web application built to streamline operations and offer digital solutions tailored for Abisheka&apos;s requirements, focusing on user experience and reliable performance.</p>
+                        <div class="pf-tags">
+                            <span class="ptg">Laravel</span>
+                            <span class="ptg">Filament PHP</span>
+                            <span class="ptg">UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 2: Inobi Web -->
+                <div class="pf-item" data-cat="web">
+                    <div class="pf-body">
+                        <span class="pf-label type-web">Web</span>
+                        <h3 class="pf-name">Inobi Web</h3>
+                        <p class="pf-desc">An innovative digital platform for Inobi, featuring a modern product catalog, blog, and admin management powered by Filament PHP with a scalable architecture.</p>
+                        <div class="pf-tags">
+                            <span class="ptg">Laravel</span>
+                            <span class="ptg">Filament PHP</span>
+                            <span class="ptg">System Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 3: Airlangga Univ Konsultan Web -->
+                <div class="pf-item" data-cat="web">
+                    <div class="pf-body">
+                        <span class="pf-label type-web">Web</span>
+                        <h3 class="pf-name">Airlangga Univ Konsultan Web</h3>
+                        <p class="pf-desc">A consultant platform for Universitas Airlangga, complete with a Filament PHP admin dashboard to manage blog posts, services, and case studies.</p>
+                        <div class="pf-tags">
+                            <span class="ptg">Laravel</span>
+                            <span class="ptg">Filament PHP</span>
+                            <span class="ptg">Consultant Portal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 4: Aplikasi ClassSync -->
+                <div class="pf-item" data-cat="mobile">
+                    <div class="pf-body">
+                        <span class="pf-label type-mobile">Mobile</span>
+                        <h3 class="pf-name">Aplikasi ClassSync</h3>
+                        <p class="pf-desc">A mobile-based class management application designed to streamline academic activities, scheduling, and student collaboration.</p>
+                        <div class="pf-tags">
+                            <span class="ptg">Java</span>
+                            <span class="ptg">Android</span>
+                            <span class="ptg">UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 5: Portofolio Web -->
+                <div class="pf-item" data-cat="web">
+                    <div class="pf-body">
+                        <span class="pf-label type-web">Web</span>
+                        <h3 class="pf-name">Portofolio Web</h3>
+                        <p class="pf-desc">A personal portfolio website showcasing my journey, skills, and projects as an Informatics Engineering student, built with a modern theme and smooth animations.</p>
+                        <div class="pf-tags">
+                            <span class="ptg">HTML/CSS</span>
+                            <span class="ptg">JavaScript</span>
+                            <span class="ptg">Web Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 6: Bot Telegram Masakan Nusantara -->
+                <div class="pf-item" data-cat="bot">
+                    <div class="pf-body">
+                        <span class="pf-label type-bot">Bot</span>
+                        <h3 class="pf-name">Bot Telegram Masakan Nusantara</h3>
+                        <p class="pf-desc">A Telegram chatbot that provides Indonesian cuisine recipe recommendations based on user requests, featuring recipe search and automated responses.</p>
+                        <div class="pf-tags">
+                            <span class="ptg">Python</span>
+                            <span class="ptg">Telegram API</span>
+                            <span class="ptg">Chatbot</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 7: Aplikasi Maps Gubeng Surabaya -->
+                <div class="pf-item" data-cat="mobile">
+                    <div class="pf-body">
+                        <span class="pf-label type-mobile">Mobile</span>
+                        <h3 class="pf-name">Aplikasi Maps Gubeng Surabaya</h3>
+                        <p class="pf-desc">A Flutter-based mobile application for locating Alfamart stores across Surabaya using Google Maps API, with geolocation and navigation support.</p>
+                        <div class="pf-tags">
+                            <span class="ptg">Flutter</span>
+                            <span class="ptg">Dart</span>
+                            <span class="ptg">Google Maps API</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Reflections Section -->
+    <section id="reflections">
+        <div class="container">
+            <div class="reflection-box">
+                <div class="quote-mark">"</div>
+                <h2>Reflections</h2>
+                <p>Through my journey in tech, I've realized that continuous learning and adaptability are the most valuable assets one can have. Every line of code written and every bug fixed brings a new perspective on problem-solving.</p>
+                <p>Working on projects like Abisheka, Inobi, ClassSync, and the Telegram Chatbot has taught me the importance of understanding user needs and delivering practical, robust solutions. I look forward to taking on more challenges and building technology that matters.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Let's Connect</h2>
+                <div class="divider"></div>
+                <p class="contact-subtitle">Feel free to reach out for collaborations or just a friendly hello!</p>
+            </div>
+            
+            <div class="contact-grid">
+                <a href="mailto:esalinaprisa@gmail.com" class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <p>esalinaprisa@gmail.com</p>
+                </a>
+                <a href="https://www.linkedin.com/in/esalina-prisa-0760a327b?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="contact-card" target="_blank">
+                    <div class="contact-icon">💼</div>
+                    <h3>LinkedIn</h3>
+                    <p>Esalina Prisa Wanudia</p>
+                </a>
+                <a href="https://wa.me/628816276203" class="contact-card" target="_blank">
+                    <div class="contact-icon">📱</div>
+                    <h3>WhatsApp</h3>
+                    <p>Chat with me</p>
+                </a>
+                <a href="https://www.instagram.com/xyzepw" class="contact-card" target="_blank">
+                    <div class="contact-icon">📸</div>
+                    <h3>Instagram</h3>
+                    <p>@xyzepw</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Esalina Prisa Wanudia. Built with passion.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
